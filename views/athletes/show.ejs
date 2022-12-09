@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+
+        <article>
+          <h2><%= athlete.name %></h2>
+          <h2><%= athlete.fortyYardDash %></h2>
+          <h2><%= athlete.benchPress %></h2>
+          <h2><%= athlete.verticalJump %></h2>
+          <h2><%= athlete.shuttleRun %></h2>
+          <h5><%= athlete.hallOfFame ? "true" : "false" %> </h5>
+          <a href="/athletes/<%= athlete._id %>/edit"><button>Edit</button></a>
+          <form action="/athletes/<%= athlete._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete"/>
+          </form>
+          <a href="/athletes/"><button>Home Page</button></a>
+        </article>
+
+      </div>
+    </main>
+  </body>
+</html>
