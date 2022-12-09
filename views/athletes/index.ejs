@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <a href="/athletes/new"><button>Create A New Athlete</button></a>
+
+        <% for (athlete of athletes) { %>
+
+        <article>
+          <a href="/athletes/<%= athlete._id %>">
+            <h2>
+              <%= athlete.name %>
+            </h2>
+          </a>
+        </article>
+
+        <% } %>
+      </div>
+    </main>
+  </body>
+</html>
