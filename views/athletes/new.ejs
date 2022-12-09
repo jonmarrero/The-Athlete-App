@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <form action="/athletes" method="post">
+          <fieldset>
+              <legend>Input New Athlete</legend>
+            <label>
+              Name:<input
+              type="text"
+              name="name"
+              placeholder="enter athlete name"
+            />
+          </label>
+          <label>
+            fortyYardDash:<input
+              type="text"
+              name="fortyYardDash"
+              placeholder="enter athlete fortyYardDash"
+            />
+          </label>
+          <label>
+              benchPress:<input
+                type="text"
+                name="benchPress"
+                placeholder="enter athlete benchPress"
+              />
+            </label>
+            <label>
+                verticalJump:<input
+                  type="text"
+                  name="verticalJump"
+                  placeholder="enter athlete verticalJump"
+                />
+            </label>
+            <label>
+                shuttleRun:<input
+                  type="text"
+                  name="shuttleRun"
+                  placeholder="enter athlete shuttleRun"
+                />
+            </label>
+            <label>
+                hallOfFame:<input type="checkbox" name="hallOfFame" />
+            </label>
+          </fieldset>
+          
+          <input type="submit" value="Input New Athlete" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
