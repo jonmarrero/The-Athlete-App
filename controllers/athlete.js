@@ -106,24 +106,6 @@ router.delete('/:id', (req, res) => {
 })
 
 
-// destroy route method 2 
-// athlete.findByIdAndDelte(req.params.id)
-// .then((deletedAthlete) => {
-    // console.log(err, deletedAthlete)
-    // res.redirect('/athletes')
-// })
-// .catch(err => console.log(err))
-
-
-// destroy route method 3 async await 
-// router.delete('/athletes/:id', async (req, res) => {
- // const deletedAthlete = await athlete.findByIdAndDelete(req.params.id)
-//if(deletedAthlete)
-//  res.redirect('/athletes')   
-// })
-
-
-
 //////////////////////
 // exports this router to use in other files 
 ///////////////////
