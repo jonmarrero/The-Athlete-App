@@ -42,7 +42,7 @@ router.get("/new", (req, res) => {
 // post route 
 router.post('/athletes', (req, res) => {
 
-    // req.body.retired = req.body.retired === 'on' ? true : false
+    req.body.hallOfFame = req.body.hallOfFame === 'on' ? true : false
 
     athlete.create(req.body, (err, createdAthlete) => {
         console.log(createdAthlete)
@@ -68,8 +68,8 @@ router.get('/:id/edit', (req, res) => {
 router.put('/:id', (req, res) => {
     // get the id from params 
     const id = req.params.id
-    // check if the retired property should be true or false
-    req.body.retired = req.body.retired === 'on' ? true : false
+    // check if the Hall of Fame property should be true or false
+    req.body.hallOfFame = req.body.hallOfFame === 'on' ? true : false
     // update the athlete 
     athlete.findByIdAndUpdate(id, req.body, { new: true }, (err, updatedAthlete) => {
         // the console.log shows the updated athlete working in my terminal 

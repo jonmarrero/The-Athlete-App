@@ -11,10 +11,10 @@ const { Schema, model } = mongoose // destructuring, grabbing model and Schema o
 
 const athletesSchema = new Schema({
     name: String,
-    fortyYardDash: Number, 
-    benchPress: Number, 
-    verticalJump: Number, 
-    shuttleRun: Number,
+    fortyYardDash: String, 
+    benchPress: String, 
+    verticalJump: String, 
+    shuttleRun: String,
     hallOfFame: Boolean   
 })
 
